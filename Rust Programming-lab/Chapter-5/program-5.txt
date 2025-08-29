@@ -1,0 +1,21 @@
+//5. Create a struct representing a geometric shape and implement methods to calculate its area
+and perimeter
+
+struct Rectangle {
+    length: f64,
+    width: f64,
+}
+
+impl Rectangle {
+    fn area(&self) -> f64 {
+        self.length * self.width
+    }
+    fn perimeter(&self) -> f64 {
+        2.0 * (self.length + self.width)
+    }
+}
+
+fn main() {
+    let r = Rectangle { length: 10.0, width: 5.0 };
+    println!("Area = {}, Perimeter = {}", r.area(), r.perimeter());
+}

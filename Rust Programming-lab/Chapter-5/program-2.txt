@@ -1,0 +1,26 @@
+//Write a program to Calculate Distance Between Two Points:
+a. A struct Point is given which has two items, x and y.
+b. The function test is given which has two instances of points initialised with some
+value of x and y.
+c. The task is to calculate the distance between the two points.
+d. The distance between two points is:
+e. Return the value of distance
+
+
+use std::f64;
+
+struct Point {
+    x: f64,
+    y: f64,
+}
+
+fn distance(a: &Point, b: &Point) -> f64 {
+    ((b.x - a.x).powi(2) + (b.y - a.y).powi(2)).sqrt()
+}
+
+fn main() {
+    let p1 = Point { x: 3.0, y: 4.0 };
+    let p2 = Point { x: 7.0, y: 1.0 };
+
+    println!("Distance = {}", distance(&p1, &p2));
+}

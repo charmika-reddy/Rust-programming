@@ -1,0 +1,15 @@
+// Write a program to Find The Factorial using functions.  rust programming
+
+fn factorial(n: u32) -> u32 {
+    let mut result = 1;
+    for i in 1..=n {
+        result *= i;
+    }
+    result
+}
+
+fn main() {
+    let number = 5;
+    let result = factorial(number);
+    println!("Factorial of {} is {}", number, result);
+}

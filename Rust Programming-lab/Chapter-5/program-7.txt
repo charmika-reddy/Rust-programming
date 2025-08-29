@@ -1,0 +1,29 @@
+//7. Define an enum representing different types of geometric shapes (e.g., circle, square,
+triangle). Implement a function that calculates the area of a shape based on its variant.
+
+
+enum Shape {
+    Circle(f64),        // radius
+    Square(f64),        // side
+    Triangle(f64, f64), // base, height
+}
+
+impl Shape {
+    fn area(&self) -> f64 {
+        match self {
+            Shape::Circle(r) => std::f64::consts::PI * r * r,
+            Shape::Square(s) => s * s,
+            Shape::Triangle(b, h) => 0.5 * b * h,
+        }
+    }
+}
+
+fn main() {
+    let c = Shape::Circle(5.0);
+    let s = Shape::Square(4.0);
+    let t = Shape::Triangle(6.0, 3.0);
+
+    println!("Circle area = {}", c.area());
+    println!("Square area = {}", s.area());
+    println!("Triangle area = {}", t.area());
+}

@@ -1,0 +1,14 @@
+//Write a program to Invoke a Static Method on Struct
+
+
+struct MathOps;
+
+impl MathOps {
+    fn square(x: i32) -> i32 {
+        x * x
+    }
+}
+
+fn main() {
+    println!("Square of 5 = {}", MathOps::square(5));
+}

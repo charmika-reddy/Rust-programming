@@ -1,0 +1,21 @@
+8. Define an enum representing different types of vehicles and use pattern matching to print
+their respective characteristics.
+
+enum Vehicle {
+    Car,
+    Bike,
+    Truck,
+}
+
+fn describe(v: Vehicle) {
+    match v {
+        Vehicle::Car => println!("Car: 4 wheels, comfortable"),
+        Vehicle::Bike => println!("Bike: 2 wheels, fuel efficient"),
+        Vehicle::Truck => println!("Truck: Heavy load carrier"),
+    }
+}
+
+fn main() {
+    let v = Vehicle::Bike;
+    describe(v);
+}

@@ -1,0 +1,26 @@
+//. Write a program to Find If the Day Is a Weekend
+a. An enum Days has been provided to you. It has all the days of the week.
+b. A method is_weekend() is incomplete.
+c. The task is to complete the method
+d. If the day is a weekend it returns 1
+e. If the day is a weekday it returns 0
+
+
+enum Days {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday,
+}
+
+fn is_weekend(day: &Days) -> bool {
+    matches!(day, Days::Saturday | Days::Sunday)
+}
+
+fn main() {
+    let today = Days::Sunday;
+    println!("{}", if is_weekend(&today) { "Weekend" } else { "Weekday" });
+}

@@ -1,0 +1,31 @@
+//Create a struct representing a person with fields such as name, age, and address.
+Implement methods to perform operations on the person.
+
+
+struct Person {
+    name: String,
+    age: u32,
+    address: String,
+}
+
+impl Person {
+    fn display(&self) {
+        println!("Name: {}, Age: {}, Address: {}", self.name, self.age, self.address);
+    }
+
+    fn birthday(&mut self) {
+        self.age += 1;
+    }
+}
+
+fn main() {
+    let mut p = Person {
+        name: "Alice".to_string(),
+        age: 20,
+        address: "Narasaraopet".to_string(),
+    };
+
+    p.display();
+    p.birthday();
+    p.display();
+}
